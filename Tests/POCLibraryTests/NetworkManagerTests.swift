@@ -41,7 +41,6 @@ final class NetworkManagerTests: XCTestCase {
         }
         wait(for: [expectation], timeout: 1.0)
     }
-    
 }
 
 class MockWebserviceHelper: RestServiceProtocol{
@@ -53,6 +52,7 @@ class MockWebserviceHelper: RestServiceProtocol{
         self.responseData = responseData
         self.error = error
     }
+    
     func request<T>(baseURL: String, q: String, org: String, completion: @escaping (Result<T, POCLibrary.NetworkError>) -> Void) where T : Decodable {
         
         guard let data = responseData else {

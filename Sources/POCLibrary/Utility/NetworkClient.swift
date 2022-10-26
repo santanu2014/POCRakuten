@@ -57,7 +57,6 @@ class UrlComponents {
     }
 }
 
-
 class NetworkClient: RestServiceProtocol {
     
     private var session: URLSessionProtocol

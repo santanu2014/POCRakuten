@@ -88,7 +88,6 @@ final class NetworkClientTest: XCTestCase {
         let response = HTTPURLResponse(url: URL(string: "TestUrl")!, statusCode: statusCode, httpVersion: nil, headerFields: nil)
         return MockURLSession(completionHandler:( mockResponseData, response, error))
     }
-
 }
 
 // Mock
@@ -110,5 +109,4 @@ class MockURLSession: URLSessionProtocol {
         completionHandler(self.completionHandler.0, self.completionHandler.1, self.completionHandler.2)
         return dataTask
     }
-    
 }
